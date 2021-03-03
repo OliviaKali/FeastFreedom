@@ -47,3 +47,6 @@ When they finish their order, they click on the click to take them to their orde
 <li>Make emails include orders information such as quantities, menu items, price total </li>
 <li>Fix any lingering bugs</li>
 </ul>
+
+### Credits
+Olivia Kalinowski and David Zhang
