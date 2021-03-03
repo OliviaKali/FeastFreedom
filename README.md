@@ -5,8 +5,9 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 
 <p>Unfortunately, website only exists on localhost for right now. </p
 
-<h2>Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server</h2>
+## Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
+<br>
 <img src="project-images/FeastFreedomHomePage.jpg" width="100%">
 
 <p>Restaurant registeration requires the Restaurant Name, Email, Password for account, Checkbox for Days Open, Hours Open, and an Image. 
@@ -58,31 +59,31 @@ where they can review their order and delete any items if they changed their min
 <img src="project-images/UserConfirmOrder.jpg" width="100%">
 <img src="project-images/UserOrderPlaced.jpg" width="100%">
 
-<p>After an order is placed an email is sent to both user and restaurant.</p>
+<p>Once an order is placed, an email is sent to both user and restaurant.</p>
 
 
 ```
 //Configuring webMail class to send emails 
-                //gmail smtp server 
-                WebMail.SmtpServer = "smtp.gmail.com";
-                    //gmail port to send emails 
-                    WebMail.SmtpPort = 587;
-                    WebMail.SmtpUseDefaultCredentials = false;
-                    //sending emails with secure protocol 
-                    WebMail.EnableSsl = true;
-                    //EmailId used to send emails from application 
-                    WebMail.UserName = "feastfreedom2@gmail.com";
-                    WebMail.Password = ""; //password goes here
+//gmail smtp server 
+       WebMail.SmtpServer = "smtp.gmail.com";
+       //gmail port to send emails 
+       WebMail.SmtpPort = 587;
+       WebMail.SmtpUseDefaultCredentials = false;
+       //sending emails with secure protocol 
+       WebMail.EnableSsl = true;
+       //EmailId used to send emails from application 
+       WebMail.UserName = "feastfreedom2@gmail.com";
+       WebMail.Password = ""; //password goes here
 
-                    //Sender email address. 
-                    WebMail.From = "feastfreedom2@gmail.com";
+       //Sender email address. 
+       WebMail.From = "feastfreedom2@gmail.com";
 
                     
 
-                    //Send email 
-                    WebMail.Send(to: userEmail, subject: "Feast Freedom Order", body: "Thank you for placing an order with " + kitchenName + ".");
-                    WebMail.Send(to: kitchenEmail, subject: "Feast Freedom Order", body: "A customer has placed an order at your restaurant.");
-                    ViewBag.Status = "Email Sent Successfully.";
+       //Send email 
+       WebMail.Send(to: userEmail, subject: "Feast Freedom Order", body: "Thank you for placing an order with " + kitchenName + ".");
+       WebMail.Send(to: kitchenEmail, subject: "Feast Freedom Order", body: "A customer has placed an order at your restaurant.");
+       ViewBag.Status = "Email Sent Successfully.";
 
 ```
 
@@ -98,7 +99,7 @@ where they can review their order and delete any items if they changed their min
 <li>Allow Restaurants to edit their menu items</li>
 <li>Add Paypal payment option</li>
 <li>Make emails include orders information such as quantities, menu items, price total </li>
-<li>Fix any lingering bugs</li>
+<li>Fix design and any lingering bugs</li>
 </ul>
 
 ### Credits
