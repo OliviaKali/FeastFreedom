@@ -27,7 +27,7 @@ they are able to view their menu, add more items to their menu, as well as delet
 <p>After a user registers, they are informed of a successful registration and brought to the login page. 
 Once the user logs in, they are able to view all the restaurants provided. When they click on the menu,
 they are able to see the restuarant's menu as well as add menu items to their cart. 
-When they finish their order, they click on the click to take them to their order page.
+When they finish their order, they click on the click to take them to their order page. </p>
 
 <img src="project-images/UserRegistration.jpg" width="75%">
 <img src="project-images/UserRegisteredSuccess.jpg" width="75%">
