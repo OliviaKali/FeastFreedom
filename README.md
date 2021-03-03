@@ -14,14 +14,14 @@ After registration is complete, the restaurant is able to add multiple menu item
 
 <p>The images that the restaurants upload are saved into a folder within the application.</p>
 ```
-   if (file != null)
-                {
-                    kitchen.Image = System.IO.Path.GetFileName(file.FileName);
-                    string physicalPath = Server.MapPath("~/Images/" + kitchen.Image);
+if (file != null)
+      {
+             kitchen.Image = System.IO.Path.GetFileName(file.FileName);
+             string physicalPath = Server.MapPath("~/Images/" + kitchen.Image);
 
-                    file.SaveAs(physicalPath);
-                }
-                ```
+             file.SaveAs(physicalPath);
+      }
+```
 
 <img src="project-images/RestaurantRegistrationWithImage.jpg" width="100%" alt="Restaurant Registration">
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
