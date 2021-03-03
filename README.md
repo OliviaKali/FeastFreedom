@@ -38,6 +38,11 @@ When they finish their order, they click on the click to take them to their orde
 <img src="project-images/UserOrder.jpg" width="100%">
 <img src="project-images/UserOrderPlaced.jpg" width="100%">
 
+<p>After an order is placed an email is sent to both user and restaurant.</p>
+<img src="project-images/EmailToRestaurant.jpg" width="100%">
+<img src="project-images/EmailToUser.jpg" width="100%">
+
+
 
 
 ## Future Development
