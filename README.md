@@ -15,7 +15,7 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
 
 <img src="project-images/RestaurantLoginPage.jpg" width="75%">
-<img src="project-images/RestaurantLogginIn.jpg" width="75%">
+<img src="project-images/RestaurantLoggedIn.jpg" width="75%">
 <img src="project-images/RestaurantMenuViewAddDelete.jpg" width="75%">
 
 
