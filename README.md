@@ -5,12 +5,18 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 
 <img src="project-images/FeastFreedomHomePage.jpg" width="75%">
 
-<p>After a restaurant registers, they are able to add multiple menu items to their menu. When they log into their account, 
-they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
+<p>After a restaurant registers, they are able to add multiple menu items to their menu.</p>
 
 
 <img src="project-images/RestaurantRegistrationWithImage.jpg" width="75%" alt="Restaurant Registration">
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="75%">
+
+<p>When a restaurant log into their account, 
+they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
+
+<img src="project-images/RestaurantLoginPage.jpg" width="75%">
+<img src="project-images/RestaurantLogginIn.jpg" width="75%">
+<img src="project-images/RestaurantMenuViewAddDelete.jpg" width="75%">
 
 
 
