@@ -15,28 +15,28 @@ C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
 <img src="project-images/RestaurantRegistrationWithImage.jpg" width="100%" alt="Restaurant Registration">
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
-<img src="project-images/AddedMenuItem.jpg" width="75%">
+<img src="project-images/AddedMenuItem.jpg" width="100%">
 
 <p>When a restaurant log into their account, 
 they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
 
-<img src="project-images/RestaurantLoginPage.jpg" width="75%">
-<img src="project-images/RestaurantLoggedIn.jpg" width="75%">
-<img src="project-images/RestaurantMenuViewAddDelete.jpg" width="75%">
+<img src="project-images/RestaurantLoginPage.jpg" width="100%">
+<img src="project-images/RestaurantLoggedIn.jpg" width="100%">
+<img src="project-images/RestaurantMenuViewAddDelete.jpg" width="100%">
 
 <p>After a user registers, they are informed of a successful registration and brought to the login page. 
 Once the user logs in, they are able to view all the restaurants provided. When they click on the menu,
 they are able to see the restuarant's menu as well as add menu items to their cart. 
 When they finish their order, they click on the click to take them to their order page. </p>
 
-<img src="project-images/UserRegistration.jpg" width="75%">
-<img src="project-images/UserRegisteredSuccess.jpg" width="75%">
+<img src="project-images/UserRegistration.jpg" width="100%">
+<img src="project-images/UserRegisteredSuccess.jpg" width="100%">
 
-<img src="project-images/UserLoggedInHome.jpg" width="75%">
-<img src="project-images/UserAddedItemsIntoCart.jpg" width="75%">
+<img src="project-images/UserLoggedInHome.jpg" width="100%">
+<img src="project-images/UserAddedItemsIntoCart.jpg" width="100%">
 
-<img src="project-images/UserOrder.jpg" width="75%">
-<img src="project-images/UserOrderPlaced.jpg" width="75%">
+<img src="project-images/UserOrder.jpg" width="100%">
+<img src="project-images/UserOrderPlaced.jpg" width="100%">
 
 
 
