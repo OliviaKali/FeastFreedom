@@ -3,9 +3,10 @@
 <p>FeastFreedom is a food service site for where restaurants upload menu items and users can order food off these local menus. 
 Users and Restaurants need to register and log in to use FeastFreedom services.</p>
 
-<p>Unfortunately, website only exists on localhost for right now. </p
+<p>Unfortunately, website only exists on localhost for right now. </p>
 
-### Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
+## Built With 
+C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
 
 <img src="project-images/FeastFreedomHomePage.jpg" width="100%">
