@@ -65,7 +65,8 @@ When they finish their order, they click on the click to take them to their orde
                     WebMail.Send(to: userEmail, subject: "Feast Freedom Order", body: "Thank you for placing an order with " + kitchenName + ".");
                     WebMail.Send(to: kitchenEmail, subject: "Feast Freedom Order", body: "A customer has placed an order at your restaurant.");
                     ViewBag.Status = "Email Sent Successfully.";
-                  ```
+
+```
 
 
 
