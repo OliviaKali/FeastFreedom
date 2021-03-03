@@ -29,14 +29,17 @@ if (file != null)
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
 <img src="project-images/AddedMenuItem.jpg" width="100%">
 
-<p>The Restaurants can always access their account by logging in.
+<p>The Restaurants can always access their account by logging in with their Restaurat Name and Password.
 By logging in, they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
 
 <img src="project-images/RestaurantLoginPage.jpg" width="100%">
 <img src="project-images/RestaurantLoggedIn.jpg" width="100%">
 <img src="project-images/RestaurantMenuViewAddDelete.jpg" width="100%">
 
-<p>After a user registers, they are informed of a successful registration and brought to the login page. 
+<p>User is required to register/login with their account before they can use the FeastFreedom services 
+of viewing restaurants in the area and ordering off of their menus.</p>
+<p>User must provide their First Name, Last Name, Email, Password, and two Security Passwords</p>
+After a user registers, they are informed of a successful registration and brought to the login page. 
 Once the user logs in, they are able to view all the restaurants provided. When they click on the menu,
 they are able to see the restuarant's menu as well as add menu items to their cart. 
 When they finish their order, they click on the click to take them to their order page. </p>
