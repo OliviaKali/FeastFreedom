@@ -1,6 +1,6 @@
 # FeastFreedom
 
-<p>FeastFreedom is a food service site for where restaurants upload menu items and users can order food off local menus. 
+<p>FeastFreedom is a food service site for where restaurants upload menu items and users can order food off these local menus. 
 Users and Restaurants need to register and log in to use FeastFreedom services.</p>
 
 <p>Unfortunately, website only exists on localhost for right now. </p
@@ -10,15 +10,16 @@ C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
 <img src="project-images/FeastFreedomHomePage.jpg" width="100%">
 
-<p>After a restaurant registers, they are able to add multiple menu items to their menu.</p>
+<p>Restaurant registeration requires the Restaurant Name, Email, Password for account, Checkbox for Days Open, Hours Open, and an Image. 
+After registration is complete, the restaurant is able to add multiple menu items to their menu.</p>
 
 
 <img src="project-images/RestaurantRegistrationWithImage.jpg" width="100%" alt="Restaurant Registration">
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
 <img src="project-images/AddedMenuItem.jpg" width="100%">
 
-<p>When a restaurant log into their account, 
-they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
+<p>The Restaurants can always access their account by logging in.
+By logging in, they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
 
 <img src="project-images/RestaurantLoginPage.jpg" width="100%">
 <img src="project-images/RestaurantLoggedIn.jpg" width="100%">
