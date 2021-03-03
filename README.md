@@ -33,7 +33,7 @@ When they finish their order, they click on the click to take them to their orde
 <img src="project-images/UserRegisteredSuccess.jpg" width="100%">
 
 <img src="project-images/UserLoggedInHome.jpg" width="100%">
-<img src="project-images/UserAddedItemsIntoCart.jpg" width="100%">
+<img src="project-images/UserViewOfRestaurantMenu.jpg" width="100%">
 
 <img src="project-images/UserOrder.jpg" width="100%">
 <img src="project-images/UserOrderPlaced.jpg" width="100%">
