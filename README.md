@@ -40,6 +40,9 @@ When they finish their order, they click on the click to take them to their orde
 
 <p>After an order is placed an email is sent to both user and restaurant.</p>
 
+<img src="project-images/EmailToRestaurant.jpg" width="100%">
+<img src="project-images/EmailToUser.jpg" width="100%">
+
 ```
 //Configuring webMail class to send emails 
                 //gmail smtp server 
@@ -63,9 +66,6 @@ When they finish their order, they click on the click to take them to their orde
                     WebMail.Send(to: kitchenEmail, subject: "Feast Freedom Order", body: "A customer has placed an order at your restaurant.");
                     ViewBag.Status = "Email Sent Successfully.";
                   ```
-
-<img src="project-images/EmailToRestaurant.jpg" width="100%">
-<img src="project-images/EmailToUser.jpg" width="100%">
 
 
 
