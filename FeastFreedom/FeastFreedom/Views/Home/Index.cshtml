@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Feast Freedom</h1>
+    <p class="lead">
+    Feast Freedom is an awesome, unique dining experience for the user. Get amazing home cooked meals 
+    in your area for a great price by signing up for Feast Freedom. There are loads of restaurants to 
+    choose from. Grab your favorite meal or try something more daring off the restaurant list.
+   </p>
+    <p>Register today and start browsing</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Sign Up Now</h2>
+        <p>
+            Want to start browsing all the restaurants available? Register now as a new user and start browsing the site today.
+        </p>
+        <button class="btn btn-default">@Html.ActionLink("User Registration", "Register", "User")</button>
+    </div>
+    <div class="col-md-4">
+        <h2>Already have an account?</h2>
+        <p>If you already have an account login in.</p>
+        <button class="btn btn-default">@Html.ActionLink("User Login", "Login", "User")</button>
+        <button class="btn btn-default">@Html.ActionLink("Restaurant Login", "Login", "Kitchens")</button>
+    </div>
+    <div class="col-md-4">
+        <h2>A New Restaurant?</h2>
+        <p>
+            Are you a new restaurant and want to sign up to provide an awesome, homemade dining experience for the thousands of users who use Feast Freedom daily?
+        </p>
+        <button class="btn btn-default">@Html.ActionLink("Restaurant Registration", "Create", "Kitchens")</button>
+    </div>
+</div>

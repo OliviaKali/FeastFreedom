@@ -1,0 +1,37 @@
+﻿@model IEnumerable<FeastFreedom.Models.Order>
+@*@model FeastFreedom.Models.Order*@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "_CustomLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank you for placing an order at @Session["KitchenName"], @Session["UserName"].ToString()!</h1>
+    <hr />
+
+    <h4>You will receive an email with your receipt.</h4>
+
+    <button class="btn btn-success">
+        @Html.ActionLink("Continue Shopping", "Index", "Kitchens")
+    </button>
+
+</body>
+
+</html>

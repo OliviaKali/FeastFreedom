@@ -1,0 +1,84 @@
+﻿@model FeastFreedom.Models.Kitchen
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        #login-div {
+            margin-top: 20%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            /*position: absolute;*/
+            /*left: 40%;
+            top: 40%;*/
+            border: 1px solid #000000;
+            padding: 10px 10px;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-div">
+        @using (Html.BeginForm("Login", "Kitchens", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td style="text-decoration:underline"> Welcome to FeastFreedom </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.KitchenName)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.KitchenName)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>@Html.ValidationMessageFor(model => model.KitchenName)</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.KitchenPasswod)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.KitchenPasswod)
+                    </td>
+                </tr>
+
+                @*<tr>
+                    <td></td>
+                    <td>@Html.ValidationMessageFor(model => model.KitchenPasswod)</td>
+                </tr>*@
+                <tr>
+                    <td></td>
+                    <td>
+                        <input class="btn btn-default" type="submit" name="name" value="Login" />
+                        <input class="btn btn-default" type="reset" name="name" value="Reset" />
+                    </td>
+                </tr>
+
+            </table>
+        }
+
+    </div>
+
+ 
+
+</body>
+
+</html>

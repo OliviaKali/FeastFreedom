@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FeastFreedomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kitchen">
+    <Key>
+      <PropertyRef Name="KitchenID" />
+    </Key>
+    <Property Name="KitchenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KitchenName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KitchenEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KitchenPasswod" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DaysWorking" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HoursWorking" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FK_RoleID" Type="Int32" />
+    <NavigationProperty Name="Role" Relationship="Self.FK__Kitchen__FK_Role__4E88ABD4" FromRole="Kitchen" ToRole="Roles" />
+    <NavigationProperty Name="Menus" Relationship="Self.FK__Menu__FK_Kitchen__5165187F" FromRole="Kitchen" ToRole="Menu" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__FK_Kitch__5535A963" FromRole="Kitchen" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuItemID" />
+    </Key>
+    <Property Name="MenuItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuItemName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Veg_NoVeg" Type="Boolean" Nullable="false" />
+    <Property Name="MenuItemPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="FK_KitchenID" Type="Int32" />
+    <NavigationProperty Name="Kitchen" Relationship="Self.FK__Menu__FK_Kitchen__5165187F" FromRole="Menu" ToRole="Kitchen" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__MenuI__59063A47" FromRole="Menu" ToRole="OrderDetails" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="MenuItemID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="MenuItemID" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="Self.FK__OrderDeta__MenuI__59063A47" FromRole="OrderDetails" ToRole="Menu" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__5812160E" FromRole="OrderDetails" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_UserID" Type="Int32" />
+    <Property Name="FK_KitchenID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Kitchen" Relationship="Self.FK__Orders__FK_Kitch__5535A963" FromRole="Orders" ToRole="Kitchen" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__5812160E" FromRole="Orders" ToRole="OrderDetails" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Orders__FK_UserI__5441852A" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Kitchens" Relationship="Self.FK__Kitchen__FK_Role__4E88ABD4" FromRole="Roles" ToRole="Kitchen" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__FK_RoleID__4BAC3F29" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FK_RoleID" Type="Int32" />
+    <Property Name="SecurityAnswer1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SecurityAnswer2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__FK_UserI__5441852A" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="Role" Relationship="Self.FK__Users__FK_RoleID__4BAC3F29" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK__Kitchen__FK_Role__4E88ABD4">
+    <End Role="Roles" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Kitchen" Type="Self.Kitchen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Kitchen">
+        <PropertyRef Name="FK_RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menu__FK_Kitchen__5165187F">
+    <End Role="Kitchen" Type="Self.Kitchen" Multiplicity="0..1" />
+    <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kitchen">
+        <PropertyRef Name="KitchenID" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="FK_KitchenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__FK_Kitch__5535A963">
+    <End Role="Kitchen" Type="Self.Kitchen" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kitchen">
+        <PropertyRef Name="KitchenID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="FK_KitchenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__MenuI__59063A47">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuItemID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="MenuItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Order__5812160E">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__FK_UserI__5441852A">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="FK_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__FK_RoleID__4BAC3F29">
+    <End Role="Roles" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="FK_RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FeastFreedomEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kitchens" EntityType="Self.Kitchen" />
+    <EntitySet Name="Menus" EntityType="Self.Menu" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Kitchen__FK_Role__4E88ABD4" Association="Self.FK__Kitchen__FK_Role__4E88ABD4">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Kitchen" EntitySet="Kitchens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menu__FK_Kitchen__5165187F" Association="Self.FK__Menu__FK_Kitchen__5165187F">
+      <End Role="Kitchen" EntitySet="Kitchens" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__FK_Kitch__5535A963" Association="Self.FK__Orders__FK_Kitch__5535A963">
+      <End Role="Kitchen" EntitySet="Kitchens" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__MenuI__59063A47" Association="Self.FK__OrderDeta__MenuI__59063A47">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Order__5812160E" Association="Self.FK__OrderDeta__Order__5812160E">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__FK_UserI__5441852A" Association="Self.FK__Orders__FK_UserI__5441852A">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__FK_RoleID__4BAC3F29" Association="Self.FK__Users__FK_RoleID__4BAC3F29">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

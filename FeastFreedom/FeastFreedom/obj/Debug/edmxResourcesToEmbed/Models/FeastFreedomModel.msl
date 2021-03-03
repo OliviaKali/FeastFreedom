@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FeastFreedomModelStoreContainer" CdmEntityContainer="FeastFreedomEntities">
+    <EntitySetMapping Name="Kitchens">
+      <EntityTypeMapping TypeName="FeastFreedomModel.Kitchen">
+        <MappingFragment StoreEntitySet="Kitchen">
+          <ScalarProperty Name="KitchenID" ColumnName="KitchenID" />
+          <ScalarProperty Name="KitchenName" ColumnName="KitchenName" />
+          <ScalarProperty Name="KitchenEmail" ColumnName="KitchenEmail" />
+          <ScalarProperty Name="KitchenPasswod" ColumnName="KitchenPasswod" />
+          <ScalarProperty Name="DaysWorking" ColumnName="DaysWorking" />
+          <ScalarProperty Name="HoursWorking" ColumnName="HoursWorking" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FK_RoleID" ColumnName="FK_RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="FeastFreedomModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+          <ScalarProperty Name="MenuItemName" ColumnName="MenuItemName" />
+          <ScalarProperty Name="Veg_NoVeg" ColumnName="Veg_NoVeg" />
+          <ScalarProperty Name="MenuItemPrice" ColumnName="MenuItemPrice" />
+          <ScalarProperty Name="FK_KitchenID" ColumnName="FK_KitchenID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="FeastFreedomModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="FeastFreedomModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="FK_UserID" ColumnName="FK_UserID" />
+          <ScalarProperty Name="FK_KitchenID" ColumnName="FK_KitchenID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="FeastFreedomModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="FeastFreedomModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="FK_RoleID" ColumnName="FK_RoleID" />
+          <ScalarProperty Name="SecurityAnswer1" ColumnName="SecurityAnswer1" />
+          <ScalarProperty Name="SecurityAnswer2" ColumnName="SecurityAnswer2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

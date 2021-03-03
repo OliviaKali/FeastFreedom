@@ -1,0 +1,96 @@
+﻿@model IEnumerable<FeastFreedom.Models.Menu>
+
+@{
+    Layout = "_CustomLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h4>Orders</h4>
+
+    @{
+        int sum = 0;
+    }
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+    <div id="dvContents">
+        <table class="table table-hover"
+               width="100%">
+            <thead>
+                @*<img src = "~/Templates/Header.jpg"
+                    width = "100%"
+                    height = "70px"/>*@
+                <tr>
+                    <th> Menu Item ID </th>
+                    <th> Menu Item Name </th>
+                    <th> Price </th>
+                    <th> Remove </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td> @x.MenuItemID </td>
+                        <td> @x.MenuItemName </td>
+                        <td> $@x.MenuItemPrice </td>
+                        <td>
+                            @*<button id="btn_delete" class="label label-primary" data="@x.MenuItemID" onclick="location.href='@Url.Action("RemoveOrder", "AddToCart")'">
+                                </button>*@
+                            <button id="btn_delete" class="label label-primary" data="@x.MenuItemID" onclick="location.href='@Url.Action("Remove","AddToCart", new {id = x.MenuItemID })'">
+                                Remove
+                            </button>
+
+                            @*<button id="btn_delete"
+                                        class="label label-primary"
+                                        data="@x.MenuItemID"
+                                        onclick="location.href='@Url.Action("Remove"," AddToCart", x)'">
+                                </button>*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            @foreach (var x in Model)
+            {
+                sum = Convert.ToInt32(x.MenuItemPrice) + sum;
+            }
+            <tfoot>
+                <tr>
+                    <td>
+                    </td>
+                    <td> </td>
+                    <td>
+                        <b> Total </b>
+                    </td>
+                    <td> $@sum </td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <button class="btn btn-warning">@Html.ActionLink("Go to Checkout", "Create", "Orders")</button>
+
+    </div>
+
+</body>
+
+</html>

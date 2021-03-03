@@ -1,0 +1,74 @@
+﻿@model FeastFreedom.Models.Kitchen
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kitchen</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KitchenName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KitchenName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KitchenEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KitchenEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KitchenPasswod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KitchenPasswod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DaysWorking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaysWorking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursWorking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursWorking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role.RoleName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KitchenID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
