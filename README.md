@@ -8,13 +8,13 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 ## Built With
 C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
-<img src="project-images/FeastFreedomHomePage.jpg" width="75%">
+<img src="project-images/FeastFreedomHomePage.jpg" width="100%">
 
 <p>After a restaurant registers, they are able to add multiple menu items to their menu.</p>
 
 
-<img src="project-images/RestaurantRegistrationWithImage.jpg" width="75%" alt="Restaurant Registration">
-<img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="75%">
+<img src="project-images/RestaurantRegistrationWithImage.jpg" width="100%" alt="Restaurant Registration">
+<img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
 <img src="project-images/AddedMenuItem.jpg" width="75%">
 
 <p>When a restaurant log into their account, 
@@ -34,7 +34,7 @@ When they finish their order, they click on the click to take them to their orde
 
 <img src="project-images/UserLoggedInHome.jpg" width="75%">
 <img src="project-images/UserAddedItemsIntoCart.jpg" width="75%">
-<img src="project-images/RestaurantMenuFromUserLogIN.jpg" width="75%">
+
 <img src="project-images/UserOrder.jpg" width="75%">
 <img src="project-images/UserOrderPlaced.jpg" width="75%">
 
