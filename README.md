@@ -5,9 +5,9 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 
 <p>Unfortunately, website only exists on localhost for right now. </p
 
-## Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
+### Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
-<br>
+
 <img src="project-images/FeastFreedomHomePage.jpg" width="100%">
 
 <p>Restaurant registeration requires the Restaurant Name, Email, Password for account, Checkbox for Days Open, Hours Open, and an Image. 
