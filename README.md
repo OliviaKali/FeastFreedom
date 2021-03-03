@@ -5,7 +5,7 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 
 <p>Unfortunately, website only exists on localhost for right now. </p
 
-## Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
+<h2>Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server</h2>
 
 <img src="project-images/FeastFreedomHomePage.jpg" width="100%">
 
@@ -44,7 +44,9 @@ of viewing restaurants in the area and ordering off of their menus.</p>
 <p>After a user registers, they are informed of a successful registration and brought to the login page. 
 Once the user logs in, they are able to view all the restaurants provided. When they click on the menu,
 they are able to see the restuarant's menu as well as add menu items to their cart. 
-When they finish their order, they click on the click to take them to their order page. </p>
+When they finish their order, they click on the cart with the number of items 
+that they placed in their cart to redirect them to the order page 
+where they can review their order and delete any items if they changed their minds. </p>
 
 <img src="project-images/UserRegistration.jpg" width="100%">
 <img src="project-images/UserRegisteredSuccess.jpg" width="100%">
@@ -53,12 +55,11 @@ When they finish their order, they click on the click to take them to their orde
 <img src="project-images/UserViewOfRestaurantMenu.jpg" width="100%">
 
 <img src="project-images/UserOrder.jpg" width="100%">
+<img src="project-images/UserConfirmOrder.jpg" width="100%">
 <img src="project-images/UserOrderPlaced.jpg" width="100%">
 
 <p>After an order is placed an email is sent to both user and restaurant.</p>
 
-<img src="project-images/EmailToRestaurant.jpg" width="100%">
-<img src="project-images/EmailToUser.jpg" width="100%">
 
 ```
 //Configuring webMail class to send emails 
@@ -87,6 +88,10 @@ When they finish their order, they click on the click to take them to their orde
 
 
 
+
+
+<img src="project-images/EmailToRestaurant.jpg" width="100%">
+<img src="project-images/EmailToUser.jpg" width="100%">
 
 ## Future Development
 <ul>
