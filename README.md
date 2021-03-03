@@ -1,12 +1,24 @@
 # FeastFreedom
 
-Feast Freedom is a food service site for where restaurants upload menu items and users can order food off local menus.
-After a restaurant registers, they are able to add multiple menu items to their menu. When they log into their account, 
-they are able to view their menu, add more items to their menu, as well as delete items from their menu.
+<p>FeastFreedom is a food service site for where restaurants upload menu items and users can order food off local menus. 
+Users and Restaurants need to register and log in to use FeastFreedom services.</p>
+
+<img src="project-images/FeastFreedomHomePage.jpg" width="75%">
+
+<p>After a restaurant registers, they are able to add multiple menu items to their menu. When they log into their account, 
+they are able to view their menu, add more items to their menu, as well as delete items from their menu.</p>
+
+
+<img src="project-images/RestaurantRegistrationWithImage.jpg" width="75%" alt="Restaurant Registration">
+<img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="75%">
+
+
+
+<p>
 
 Unfortunately, website only exists on localhost for right now.
 
-<img src="project-images/FeastFreedomHomePage.jpg" width="50%">
+
 
 ## Built With
 C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
