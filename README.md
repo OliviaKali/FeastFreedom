@@ -5,14 +5,23 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 
 <p>Unfortunately, website only exists on localhost for right now. </p
 
-## Built With
-C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
+## Built With C#, MVC, Entity Framework, Bootstrap, CSHTML, CSS, SQL Server
 
 <img src="project-images/FeastFreedomHomePage.jpg" width="100%">
 
 <p>Restaurant registeration requires the Restaurant Name, Email, Password for account, Checkbox for Days Open, Hours Open, and an Image. 
 After registration is complete, the restaurant is able to add multiple menu items to their menu.</p>
 
+<p>The images that the restaurants upload are saved into a folder within the application.</p>
+```
+   if (file != null)
+                {
+                    kitchen.Image = System.IO.Path.GetFileName(file.FileName);
+                    string physicalPath = Server.MapPath("~/Images/" + kitchen.Image);
+
+                    file.SaveAs(physicalPath);
+                }
+                ```
 
 <img src="project-images/RestaurantRegistrationWithImage.jpg" width="100%" alt="Restaurant Registration">
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
