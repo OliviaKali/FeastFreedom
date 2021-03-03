@@ -13,6 +13,7 @@ Users and Restaurants need to register and log in to use FeastFreedom services.<
 After registration is complete, the restaurant is able to add multiple menu items to their menu.</p>
 
 <p>The images that the restaurants upload are saved into a folder within the application.</p>
+
 ```
 if (file != null)
       {
@@ -22,6 +23,7 @@ if (file != null)
              file.SaveAs(physicalPath);
       }
 ```
+
 
 <img src="project-images/RestaurantRegistrationWithImage.jpg" width="100%" alt="Restaurant Registration">
 <img src="project-images/RestaurantRegisteredAddMenuItem.jpg" width="100%">
